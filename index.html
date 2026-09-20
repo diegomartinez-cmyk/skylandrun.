@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skyland Run</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="menu">
+  <div class="card">
+    <h1>SKYLAND RUN</h1>
+
+    <p>
+      Explora los 7 biomas, completa los eventos
+      y elimina a todos los rivales.
+    </p>
+
+    <p class="controls">
+      WASD mover · touchpad/ratón mirar · clic disparar ·
+      ESPACIO saltar · R recargar · M mapa
+    </p>
+
+    <label>
+      Dificultad
+      <select id="difficulty">
+        <option value="easy">Fácil</option>
+        <option value="normal">Normal</option>
+        <option value="hard">Difícil</option>
+      </select>
+    </label>
+
+    <label>
+      Aparecer en
+      <select id="spawn">
+        <option value="random">Aleatorio</option>
+        <option value="forest">Bosque Encantado</option>
+        <option value="desert">Desierto Dorado</option>
+        <option value="jungle">Jungla Salvaje</option>
+        <option value="snow">Nieve Helada</option>
+        <option value="volcano">Volcán Ardiente</option>
+        <option value="ruins">Ruinas Griegas</option>
+        <option value="cave">Cueva Cristalina</option>
+      </select>
+    </label>
+
+    <button id="play">JUGAR</button>
+
+    <div id="records"></div>
+  </div>
+</div>
+
+<div id="hud">
+  <div id="top">
+    <span id="alive"></span>
+    <span id="timer">0.0 s</span>
+  </div>
+
+  <div id="cross">+</div>
+
+  <div id="msg"></div>
+
+  <div id="bars">
+    <div>❤️ <span id="hpText">100</span></div>
+    <div class="bar"><i id="hp"></i></div>
+
+    <div>🛡️ <span id="shieldText">50</span></div>
+    <div class="bar"><i id="shield"></i></div>
+  </div>
+
+  <div id="weapon">
+    🔫 <span id="ammo">30</span>
+  </div>
+</div>
+
+<div id="map">
+  <div class="mapbox">
+    <h2>🗺️ MAPA</h2>
+    <div id="mapinner"></div>
+    <p>M para cerrar</p>
+  </div>
+</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+  }
+}
+</script>
+
+<script type="module" src="game.js"></script>
+
+</body>
+</html>
